@@ -1,0 +1,28 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Twitter.API/Oauth.cs" ctype="Workbench">
+    <Files>
+      <File FileName="Twitter.API/API.cs" Line="21" Column="4" />
+      <File FileName="Twitter.API/Oauth.cs" Line="74" Column="3" />
+      <File FileName="Twitter.API/Handler.cs" Line="9" Column="22" />
+      <File FileName="Twitter.API/Parameter.cs" Line="28" Column="2" />
+      <File FileName="Twitter.API/ParameterComparer.cs" Line="3" Column="1" />
+      <File FileName="Twitter.API/Principal.cs" Line="19" Column="115" />
+      <File FileName="Twitter.API/Tweet.cs" Line="7" Column="2" />
+      <File FileName="Twitter.API/User.cs" Line="4" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Twitter.API" expanded="True">
+            <Node name="Oauth.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches ctype="PinnedWatchStore" />
+</Properties>
