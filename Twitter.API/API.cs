@@ -29,9 +29,6 @@ namespace Twitter.API
 				
 				_oAuth.oAuthWebRequest(Handler.Method.POST,"http://twitter.com/statuses/update.json","status="+tweet);
 				
-				_oAuth.oAuthWebRequest(Handler.Method.POST, new List<Parameter> {
-					new Parameter("status", tweet)
-				});
 				
             }catch(Exception ex){
 				Console.WriteLine(ex.Message);

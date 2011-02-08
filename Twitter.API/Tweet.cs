@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 
 namespace Twitter.API
 {
+	
 	[JsonObject(MemberSerialization.OptIn)]
 	public class Tweet:JsonSerializer
 	{
