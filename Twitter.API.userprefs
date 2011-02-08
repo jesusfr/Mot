@@ -1,21 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Twitter.API/Principal.cs" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Twitter.API\ParameterComparer.cs" ctype="Workbench">
     <Files>
-      <File FileName="Twitter.API/API.cs" Line="31" Column="5" />
-      <File FileName="Twitter.API/Oauth.cs" Line="74" Column="3" />
-      <File FileName="Twitter.API/Handler.cs" Line="9" Column="22" />
-      <File FileName="Twitter.API/Parameter.cs" Line="28" Column="2" />
-      <File FileName="Twitter.API/ParameterComparer.cs" Line="3" Column="1" />
-      <File FileName="Twitter.API/Principal.cs" Line="20" Column="28" />
-      <File FileName="Twitter.API/Tweet.cs" Line="134" Column="26" />
-      <File FileName="Twitter.API/User.cs" Line="4" Column="2" />
+      <File FileName="Twitter.API\API.cs" Line="31" Column="5" />
+      <File FileName="Twitter.API\Oauth.cs" Line="74" Column="3" />
+      <File FileName="Twitter.API\Handler.cs" Line="9" Column="22" />
+      <File FileName="Twitter.API\Parameter.cs" Line="28" Column="2" />
+      <File FileName="Twitter.API\ParameterComparer.cs" Line="3" Column="1" />
+      <File FileName="Twitter.API\Principal.cs" Line="25" Column="2" />
+      <File FileName="Twitter.API\Tweet.cs" Line="134" Column="26" />
+      <File FileName="Twitter.API\User.cs" Line="4" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Twitter.API" expanded="True">
-            <Node name="Principal.cs" selected="True" />
+          <Node name="Twitter.API" expanded="True" selected="True">
+            <Node name="References" expanded="True" />
           </Node>
         </State>
       </Pad>

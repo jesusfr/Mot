@@ -9,7 +9,7 @@ namespace Twitter.API
 	{
 		
 		[JsonProperty(PropertyName = "id")]	
-		public decimal id{
+		public string id{
 			get{return id;}
 			set{}
 		}
