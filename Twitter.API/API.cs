@@ -14,7 +14,7 @@ namespace Twitter.API
                 
 				// Launch the web browser...
                 System.Diagnostics.Process.Start(authLink);
-				System.Console.WriteLine("Mete el pipi");
+				System.Console.WriteLine("Pin");
 				pin = System.Console.ReadLine();
 				_oAuth.PIN = pin;
 				_oAuth.AccessTokenGet(_oAuth.OAuthToken, pin);
@@ -28,6 +28,10 @@ namespace Twitter.API
                 string tweet = HttpUtility.UrlEncode(text);
 				
 				_oAuth.oAuthWebRequest(Handler.Method.POST,"http://twitter.com/statuses/update.json","status="+tweet);
+				
+				_oAuth.oAuthWebRequest(Handler.Method.POST, new List<Parameter> {
+					new Parameter("status", tweet)
+				});
 				
             }catch(Exception ex){
 				Console.WriteLine(ex.Message);
