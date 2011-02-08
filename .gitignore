@@ -1,6 +1,8 @@
-.*
+#files
 *~
 *.sw[a-p]
+*.pidb
+*.pdb
 
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 bin
