@@ -1,148 +1,74 @@
 using System;
-using Newtonsoft.Json;
+using System.Runtime.Serialization;
+
 
 namespace Twitter.API
 {
-	
-	[JsonObject(MemberSerialization.OptIn)]
-	public class Tweet:JsonSerializer
+	[DataContract]
+	public class Tweet
 	{
 		
-		[JsonProperty(PropertyName = "id")]	
-		public string id{
-			get{return id;}
-			set{}
-		}
+	public Nullable<bool> coordinates;
+	public Nullable<bool> favorited;
+	public Nullable<bool> truncated;
+    public string created_at;
+    public string id_str;
+    public string in_reply_to_user_id_str;
+    public Nullable<bool> contributors;
 	
-//		[JsonProperty(PropertyName = "coordinates")]
-//		public string  coordinates{
-//				set;
-//				get;
-//		}
-//	
-//		[JsonProperty(PropertyName = "created_at")]
-//		public string  created_at{
-//				set;
-//				get;
-//		}
-//	
-//		[JsonProperty(PropertyName = "truncated")]
-//		Nullable<bool>  truncated{
-//				set;
-//				get;
-//		}
-//	
-//	[JsonProperty(PropertyName = "favorited")]
-//	Nullable<bool>  favorited{
-//			set;
-//			get;
-//	}
-//	
-//	
-//	[JsonProperty(PropertyName = "id_str")]
-//	public string  id_str{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "in_reply_to_user_id_str")]
-//	public string  in_reply_to_user_id_str{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "contributors")]
-//	public string  contributors{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "text")]
-//	public string  text{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "retweet_count")]
-//	public int 	retweet_count{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "in_reply_to_status_id_str")]
-//	public string  in_reply_to_status_id_str{
-//			set;
-//			get;
-//	}
-//		
-//	[JsonProperty(PropertyName = "geo")]
-//	public string  geo{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "retweeted")]
-//	Nullable<bool>  retweeted{
-//			set;
-//			get;
-//	}
-//		
-//
-//	[JsonProperty(PropertyName = "in_reply_to_user_id")]
-//	public string  in_reply_to_user_id{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "source")]
-//	public string  source{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "in_reply_to_screen_name")]
-//	public string  in_reply_to_screen_name{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "place")]
-//	public string  place{
-//			set;
-//			get;
-//	}
-//	
-//	[JsonProperty(PropertyName = "in_reply_to_status_id")]
-//	public string	in_reply_to_status_id{
-//			set;
-//			get;
-//	}
-
+	[DataMember]
+    public string text{
+			set{}
+			get{return text;}
 	}
-}
+	public double id;
+	public int retweet_count;
+	public double in_reply_to_status_id_str;
+    public double geo;
+	public Nullable<bool> retweeted;
+    public double in_reply_to_user_id;
+    public double in_reply_to_screen_name;
+	
+	public class user{
+      public string profile_sidebar_border_color;
+      public string name;
+      public Nullable<bool> profile_background_tile;
+      public string profile_sidebar_fill_color;
+      public string profile_image_url;
+      public string created_at;
+      public string location;
+      public string profile_link_color;
+      public string id_str;
+      public Nullable<bool> follow_request_sent;
+      public Nullable<bool> is_translator;
+      public Nullable<bool> contributors_enabled;
+      public string url;
+      public int favourites_count;
+      public double utc_offset;
+      public double id;
+      public int listed_count;
+      public Nullable<bool> profile_use_background_image;
+      public double followers_count;
+      public string lang;
+      public Nullable<bool> @protected;
+      public string profile_text_color;
+      public Nullable<bool> notifications;
+      public Nullable<bool> verified;
+      public string time_zone;
+      public Nullable<bool> geo_enabled;
+	  public string profile_background_color;
+      public string description;
+      public double friends_count;
+      public double statuses_count;
+      public string profile_background_image_url;
+      public string screen_name;
+      public Nullable<bool> show_all_inline_media;
+      public Nullable<bool> following;
+    }
+		
+    public Nullable<bool> place;
+    public string source;
+    public Nullable<bool> in_reply_to_status_id;
+  }
 
-///*{
-//    "coordinates": null,
-//    "created_at": "Fri Jan 28 03:04:40 +0000 2011",
-//    "truncated": false,
-//    "favorited": false,
-//    "id_str": "30823543100932096",
-//    "in_reply_to_user_id_str": null,
-//    "contributors": null,
-//    "text": "Como llegaron los filtros a twitter o como perdi mis amigos imaginarios.",
-//    "id": 30823543100932096,
-//    "retweet_count": 0,
-//    "in_reply_to_status_id_str": null,
-//    "geo": null,
-//    "retweeted": false,
-//    "in_reply_to_user_id": null,
-//    
-//    "source": "web",
-//    "in_reply_to_screen_name": null,
-//    "place": null,
-//    "in_reply_to_status_id": null
-//  }
-//  
-//  
-//  
-//  */
+}

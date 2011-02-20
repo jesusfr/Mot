@@ -48,14 +48,18 @@
     <Compile Include="ParameterComparer.cs" />
     <Compile Include="Principal.cs" />
     <Compile Include="Tweet.cs" />
-    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web" />
     <Reference Include="System" />
     <Reference Include="Newtonsoft.Json.Net35, Version=4.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libs\Newtonsoft.Json.Net35\Newtonsoft.Json.Net35.dll</HintPath>
+      <HintPath>..\Libs\Net35\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="ServiceStack.Text, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\ServiceStack.Text\ServiceStack.Text.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

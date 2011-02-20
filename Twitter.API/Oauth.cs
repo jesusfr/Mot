@@ -75,7 +75,7 @@ namespace Twitter.API
 		public Oauth (){
 			ConsumerKey = "4kNE1dLcVgdCSHUN2o6aaA";
             ConsumerSecret = "kEjDsRBRtYAKJuwdnY8XaqYojiSZG2Jmgms1tL37zM";
-			//PIN;
+			PIN = "3097300";
 		}
 		
 					
