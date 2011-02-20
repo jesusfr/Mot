@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using ServiceStack.Text;
 using Newtonsoft.Json;
 
 namespace Twitter.API
@@ -16,27 +15,18 @@ namespace Twitter.API
 			
 			
 			API api = new API();
-			Console.WriteLine("Me preparo a buscar el tweet");	
-			//api.sendTweet("");
-			String tweet = api.retriveTimeline(10);//.Split(new char[]{'[',']'},StringSplitOptions.RemoveEmptyEntries)[0];
 			
-			Console.WriteLine("tweet antes de ser parseado");
-			Console.WriteLine(tweet);
-			Console.WriteLine();
+			Console.WriteLine("Looking for the last 10 tweets");	
+
+			Tweet[] tl = api.retriveTimeline(10);
 			
-			//Tweet[] tw = TypeSerializer.DeserializeFromString<Tweet[]>(tweet); 
-			
-			Tweet[] tw = JsonConvert.DeserializeObject<Tweet[]>(tweet);
-			
-			Console.WriteLine("tweet despues de ser parseado");
-			
-			foreach(Tweet t in tw){
-				Console.WriteLine(t.user.name + ":");
-				Console.WriteLine(t.text);
+			foreach(Tweet t in tl){
+				Console.WriteLine("From:" + t.user.name + ":");
+				Console.WriteLine("tweet:" + t.text);
 				Console.WriteLine();
 			}
             
-			Console.WriteLine("fin");
+			Console.WriteLine("TL END");
             Console.ReadKey();
 				
 			

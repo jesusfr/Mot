@@ -1,5 +1,6 @@
 using System;
 using System.Web;
+using Newtonsoft.Json;
 
 namespace Twitter.API
 {
@@ -39,7 +40,7 @@ namespace Twitter.API
            
         }
 		
-		public string retriveTimeline(int count){
+		public Tweet[] retriveTimeline(int count){
 		  string timeline = null;
 			
 			try{
@@ -52,7 +53,7 @@ namespace Twitter.API
                	return null;
             }
 		
-			return timeline;
+			return JsonConvert.DeserializeObject<Tweet[]>(timeline);
 		}
 		
 		public string retriveMentions(int count){
