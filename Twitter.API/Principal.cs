@@ -15,10 +15,16 @@ namespace Twitter.API
 			
 			
 			API api = new API();
+			Tweet[] tl = null;
+			
+			System.Diagnostics.Process.Start(api.AuthLink());
+			Console.WriteLine("Pin:");
+			string pin = Console.ReadLine();
+			api.Authentication(pin);
 			
 			Console.WriteLine("Looking for the last 10 tweets");	
 
-			Tweet[] tl = api.retriveTimeline(10);
+			tl = api.retriveTimeline(10);
 			
 			foreach(Tweet t in tl){
 				Console.WriteLine("From:" + t.user.name + ":");
@@ -27,6 +33,21 @@ namespace Twitter.API
 			}
             
 			Console.WriteLine("TL END");
+			
+			
+			Console.WriteLine("Looking for the last 10 Mentions");	
+
+			tl = api.retriveMentions(10);
+			
+			foreach(Tweet t in tl){
+				Console.WriteLine("From:" + t.user.name + ":");
+				Console.WriteLine("tweet:" + t.text);
+				Console.WriteLine();
+			}
+            
+			Console.WriteLine("Mentions END");
+			
+			
             Console.ReadKey();
 				
 			

@@ -10,16 +10,19 @@ namespace Twitter.API
 		
 		public API (){
 			
-		 		string authLink = _oAuth.AuthorizationLinkGet();
-				string pin = null;
-                
-				// Launch the web browser...
-                System.Diagnostics.Process.Start(authLink);
-				System.Console.WriteLine("Pin");
-				pin = System.Console.ReadLine();
+		 		
+		}
+		
+		public void Authentication(string pin){
 				_oAuth.PIN = pin;
 				_oAuth.AccessTokenGet(_oAuth.OAuthToken, pin);
 		}
+		
+		public string AuthLink(){
+				return _oAuth.AuthorizationLinkGet();
+		}
+		
+		
 		
 		public void sendTweet(string text){
             try{
@@ -56,20 +59,19 @@ namespace Twitter.API
 			return JsonConvert.DeserializeObject<Tweet[]>(timeline);
 		}
 		
-		public string retriveMentions(int count){
+		public Tweet[] retriveMentions(int count){
 		  string mentions = null;
 			
 			try{
 				
-			     mentions = _oAuth.oAuthWebRequest(Handler.Method.GET,"http://api.twitter.com/1/statuses/home_timeline.json","count="+count.ToString());
+			     mentions = _oAuth.oAuthWebRequest(Handler.Method.GET,"http://api.twitter.com/1/statuses/mentions.json","count="+count.ToString());
 				
             }catch(Exception ex){
 				Console.WriteLine(ex.Message);
 				Console.Write(ex.StackTrace);
-               	return mentions;
             }
 		
-			return mentions;
+			return JsonConvert.DeserializeObject<Tweet[]>(mentions);
 		}
 		
 		
